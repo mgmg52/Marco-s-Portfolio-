@@ -8,4 +8,4 @@ This repository was created to showcase my analytical and technical skills using
 * Pyhton 
 * Power BI 
 ## My Projects 📚
-- [Wear the data: A BI Analysis of Zara Product Portoflio](#Wear the data: A BI Analysis of Zara Product Portfolio)
+## Wear the Data: A BI Analysis of Zara Product Portfolio
