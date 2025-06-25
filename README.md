@@ -6,17 +6,12 @@ This repository was created to showcase my analytical and technical skills using
 * SQL
 * Excel
 * Pyhton 
-* Power BI 
-## My Projects 📚
-- [Wear the Data: A BI Analysis of Zara Product Portfolio](#wear-the-data-a-bi-analysis-of-zara-product-portfolio)
+* Power BI
 ## 📚 Table of Contents
 
-- [📊 Wear the Data: A BI Analysis of Zara Product Portfolio](#wear-the-data-a-bi-analysis-of-zara-product-portfolio)
-  - [🔍 Business Challenge](#business-challenge)
-  - [📌 Key Questions](#key-questions)
-- [📈 KPI Analysis](#kpi-analysis)
-  - [🛍️ Promotional Lift Rate by Section and Terms](#promotional-lift-rate-by-section-and-terms)
-  - [📉 Promotion Success Rate by Terms](#promotion-success-rate-by-terms)
-  - [💰 Product Performance Quartiles](#product-performance-quartiles)
-  - [🌈 Portfolio Diversity Score](#portfolio-diversity-score)
-  - [🧾 Catalog Position Revenue](#catalog-position-revenue)
+- [📈 My portfolio projects](#my-portfolio-projects)
+  - [👠 Wear the Data: A BI Analysis of Zara Product Portfolio](#wear-the-data-a-bi-analysis-of-zara-product-portfolio)
+- [🧾Study projects](#study-projects)
+  - [SQL exercises](#SQL-exercises)
+  - [Python exercises](#Python-exercises)
+  - [Excel exercises](#Excel-exercises)
