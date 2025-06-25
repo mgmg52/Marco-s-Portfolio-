@@ -5,7 +5,7 @@ I am passionate about exploring different datasets, uncovering key inisghts, and
 This repository was created to showcase my analytical and technical skills using the following tools:
 * SQL
 * Excel
-* Pyhton 
+* Python 
 * Power BI
 ## 📚 Table of Contents
 
