@@ -3,7 +3,7 @@ SELECT
   terms,
   -- average sales volume when on promotion -- What is the average number of units sold for items that were on promotion?
   AVG(CASE WHEN promotion = 'Yes' THEN sales_volume END)               AS avg_promo_vol,
-  -- average sales volume when not on promotion -- What is the avergae number of units sold for items that were NOT on promotion?
+  -- average sales volume when not on promotion -- What is the average number of units sold for items that were NOT on promotion?
   AVG(CASE WHEN promotion = 'No' THEN sales_volume END)               AS avg_nonpromo_vol,
   -- promotional lift = (avg_promo_vol / avg_nonpromo_vol) - 1
   ROUND(
