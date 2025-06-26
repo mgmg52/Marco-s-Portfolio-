@@ -21,5 +21,7 @@ This repository was created to showcase my analytical and technical skills using
 
   This section contains a list of projects with a brief description
 
+  # 👠 Wear the Data: A BI Analysis of Zara Product Portfolio
+
   
 
