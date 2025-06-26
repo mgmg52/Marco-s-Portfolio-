@@ -23,7 +23,7 @@ This section contains a list of projects with brief descriptions.
 **Description:** The main goal of this project is to examine Zara’s product's portfolio to get useful insights on how Zara can maximize promotional effectiviness across its product portfolio and optimize it for maximum sales impact through the computing of 4 main KPIs leveraging SQL. Then, information and insights acquired are visualized using Power BI.                                                                      
 **Presentation:**                                                                                                                                                                                                      
 **Original dataset:**                                                                                                                                                                                                         
-**Skills:** analytical thinking, data analysis, data vizualization                                                                                                                                                    
+**Skills:** analytical thinking, data analysis, data visualization                                                                                                                                                    
 **Hard skills:** SQL, Power BI                                                                                                                                                                                        
 **Results:** 
 
