@@ -16,3 +16,5 @@ This repository was created to showcase my analytical and technical skills using
   - [SQL exercises](#SQL-exercises)
   - [Python exercises](#Python-exercises)
   - [Excel exercises](#Excel-exercises)
+
+  [📈 My portfolio projects](#my-portfolio-projects)
