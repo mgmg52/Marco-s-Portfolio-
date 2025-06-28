@@ -83,8 +83,29 @@ The dataset contains 252 unique products and there are no missing value in any c
 
 - Metric: AVG(sales_volume WHERE promotion = 'Yes') / AVG(sales_volume WHERE promotion = 'No') - 1
 - Business question: Which section and term should Zara allocate more promotional budget to?
-- Why is this KPI relevant ?: Although Zara is not known as much as its competitor for this policy, the fast fashion industry is well-known for its discount culture. Namely they run (almost) endless promotions all over the year. Tracking promotional lift rate by section, that is comparing the sales volume promoted vs. unpromoted items within the same section and terms, can help to get a better understanding of Zara portfolio performance, by acquiring valuable insights on relative performance patterns. 
+- Why is this KPI relevant ?: Although Zara is not known as much as its competitor for this policy, the fast fashion industry is well-known for its discount culture. Namely they run (almost) endless promotions all over the year. Tracking promotional lift rate across clothing type and sex, that is comparing the sales volume promoted vs. unpromoted items within the same section and terms, can help to get a better understanding of Zara portfolio performance. In fact, it contributes to acquire valuable insights on relative performance patterns as it quantify the incremental impact of discounting.
 
+```sql
+SELECT
+  section as sex,
+  terms as clothing_type,
+  -- average sales volume when on promotion -- What is the average number of units sold for items that were on promotion?
+  ROUND(AVG(CASE WHEN promotion = 'Yes' THEN sales_volume END),3) as avg_promo_vol,
+  -- average sales volume when not on promotion -- What is the average number of units sold for items that were NOT on promotion?
+  ROUND(AVG(CASE WHEN promotion = 'No' THEN sales_volume END),3) as avg_nonpromo_vol,
+  -- promotional lift rate = (avg_promo_vol / avg_nonpromo_vol) - 1 -- To what extent do average units sold increase (or decrease) when those items are on promotion versus when they are not?
+  ROUND(AVG(CASE WHEN promotion = 'Yes' THEN sales_volume END)
+    / NULLIF(AVG(CASE WHEN promotion = 'No' THEN sales_volume END), 0)
+    - 1,
+    3
+  ) as promotional_lift_rate
+FROM zara_sales
+GROUP BY section,terms
+ORDER BY promotional_lift_rate DESC
+
+Answer:
+
+![image](https://github.com/user-attachments/assets/1959a942-ff87-4e27-8026-509a8c2227b1)
 
 
 
