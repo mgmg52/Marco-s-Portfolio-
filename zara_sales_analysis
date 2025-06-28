@@ -1,3 +1,17 @@
+# 👠 Wear the Data: A BI Analysis of Zara's Product Portofolio
+
+## 📌 Solution
+
+### 1. How many unique users exist in the logs dataset?
+
+
+
+
+
+
+
+
+
 SELECT
   section,
   terms,
