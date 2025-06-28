@@ -102,6 +102,7 @@ SELECT
 FROM zara_sales
 GROUP BY section,terms
 ORDER BY promotional_lift_rate DESC
+```
 
 Answer:
 
