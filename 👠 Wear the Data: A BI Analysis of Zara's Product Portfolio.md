@@ -118,7 +118,7 @@ However, a moderate negative promotional lift rate is showed in all the other cl
 This KPI clearly reveals that most of the promotions are failing to attrack new buyers as they present a negative lift rate.  
 In this sense, Zara should pull back discount's on certain men's jackets, shoes, jeans, and t shirts, rethinking new ways to increase sales. Moreover, Zara should prioritize promo bugdet allocation in Women's sweaters slice as it has proven to deliver a significant boost in sales volume.
 
-### 2B. Promotion Success Rate 
+### 2B. Efficiency flag 
 
 - Business question: Which terms is Zara wasting promotional budget on?
 - Why is this KPI relevant ?: This KPI is related to the previous one and the marketing concept of “promotion fatigue”, namely when customers become overwhelmed by the number of promotions and marketing communications that learn to wait for markdown, generally reducing the engagement with the brand. By comparing promotion penetration (the ratio between promoted items and total items) and the previously computed promotional lift rate within clothing type and gender, we could get a better picture of which product categories are over-promoted but are actually underperforming.
@@ -167,6 +167,10 @@ Answer:
 
 ![image](https://github.com/user-attachments/assets/cb856da8-57d8-4c7e-9257-9a729870a938)
 
+The results show that Men's shoes, jackets, and t-shirts are very promoted but report a low lift, resulting in discounting that deliver no incremental value, as almost half of these three items on these clothing types are on promotion but they all report a negative lift rate.  
+On the opposite, promotions on Women's sweaters deliver strong incremental sales as well as Men's sweaters which shows a both a positive promotional penetration and lift rate despite cannote be listed as over-promoted due to a moderate penetration rate (0.143).  
+Finally, despite cannot be defined as over-promoted due to a promotional penetration slight under 0.40, Men's jeans still show a negative relationship bewteen items on promotion and the value they deliver.  
+Coupled with the previous KPI, this one confirms that Zara's endless and massive discount culture is driving ambigous results on sales volume, with the notable expection of Women's sweaters. Furthermore, men's sweater slice is worth keeping under observation, testing if incrementally increase promotions lead to lift rate to scale further.
 
 
 
