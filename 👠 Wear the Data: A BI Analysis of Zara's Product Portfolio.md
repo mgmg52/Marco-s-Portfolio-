@@ -84,7 +84,6 @@ This inbalanced assortment gives an important context the correctly interpretate
 
 ### 1B. Promotional Lift Rate by Section and Terms
 
-- Metric: AVG(sales_volume WHERE promotion = 'Yes') / AVG(sales_volume WHERE promotion = 'No') - 1
 - Business question: Which section and term should Zara allocate more promotional budget to?
 - Why is this KPI relevant ?: Although Zara isn’t as associated with heavy discounting as some competitors, fast fashion in general relies on almost endless promotions.
 Tracking promotional lift rate, that is comparing the sales volume promoted vs. unpromoted within each clothing type and gender segment, can help to get a better understanding of Zara portfolio performance.
@@ -121,7 +120,6 @@ In this sense, Zara should pull back discount's on certain men's jackets, shoes,
 
 ### 2B. Promotion Success Rate 
 
-- Metric: COUNT(*) WHERE Promotion = 'Yes' / COUNT (*) by
 - Business question: Which terms is Zara wasting promotional budget on?
 - Why is this KPI relevant ?: This KPI is related to the previous one and the marketing concept of “promotion fatigue”, namely when customers become overwhelmed by the number of promotions and marketing communications that learn to wait for markdown, generally reducing the engagement with the brand. By comparing promotion penetration (the ratio between promoted items and total items) and the previously computed promotional lift rate within clothing type and gender, we could get a better picture of which product categories are over-promoted but are actually underperforming.
 
