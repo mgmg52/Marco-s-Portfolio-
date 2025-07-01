@@ -77,7 +77,7 @@ There are 5 different types of clothes. All of them are available for men, while
 
 The dataset contains 252 unique products and there are no missing value in any critical field, so we can trust its completeness.  
 However, there is a strong imbalance in products offerings as 218 products are classified under the Men's section, while only 34 under Women's section.  
-Moreover, all the five terms appear in the Men's section, whereas the Women's section includes only sweaters.  
+Moreover, all the five clothing types appear in the Men's section, whereas the Women's section includes only sweaters.  
 This inbalanced assortment gives an important context the correctly interpretate the following KPIs.
 
 ## B. KPIs Analysis: Zara Portfolio Performance
