@@ -114,7 +114,7 @@ Answer:
 
 The more negative the lift, the worse a promotion performs vs full-price.  
 Within Zara's portfolio, Women's sweaters are clearly promo winners, as a promotion lift rate of 0.234 means that those in promotion are sold 23.4 % times more compared to the full-price ones. A positive lift rate is also seen for Men's sweaters.  
-However, a moderate negative promotional lift rate is showed in all the other clothing type for men, meaning that those in promotion are sold less than full price items. with the worst performer being Men's t-shirts with a promotional lift rate of -0.125.  
+However, a moderate negative promotional lift rate is showed in all the other clothing type for men, meaning that those in promotion are sold less than full price items, with the worst performer being Men's t-shirts with a promotional lift rate of -0.125.  
 This KPI clearly reveals that most of the promotions are failing to attrack new buyers as they present a negative lift rate.  
 In this sense, Zara should pull back discount's on certain men's jackets, shoes, jeans, and t shirts, rethinking new ways to increase sales. Moreover, Zara should prioritize promo bugdet allocation in Women's sweaters slice as it has proven to deliver a significant boost in sales volume.
 
