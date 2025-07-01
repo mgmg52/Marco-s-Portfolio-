@@ -131,7 +131,7 @@ In this sense, Zara should pull back discount's on certain men's jackets, shoes,
   COUNT(*) as total_clothes,
   -- number of clothes on promotion
   SUM(CASE WHEN promotion = 'Yes' THEN 1 ELSE 0 END) as promo_clothes,
-  -- promotion penetration: fraction of this term on promo
+  -- promotion penetration: fraction of this term on promotion
   ROUND(
     SUM(CASE WHEN promotion = 'Yes' THEN 1 ELSE 0 END) * 1.0
     / COUNT(*),
@@ -160,7 +160,7 @@ In this sense, Zara should pull back discount's on certain men's jackets, shoes,
   END as efficiency_flag
 FROM zara_sales
 GROUP BY terms,section
-ORDER BY promotion_penetration DESC;
+ORDER BY promotion_penetration DESC
 ```
 
 Answer:
@@ -172,7 +172,42 @@ On the opposite, promotions on Women's sweaters deliver strong incremental sales
 Finally, despite cannot be defined as over-promoted due to a promotional penetration slight under 0.40, Men's jeans still show a negative relationship bewteen items on promotion and the value they deliver.  
 Coupled with the previous KPI, this one confirms that Zara's endless and massive discount culture is driving ambigous results on sales volume, with the notable expection of Women's sweaters. Furthermore, men's sweater slice is worth keeping under observation, testing if incrementally increase promotions lead to lift rate to scale further.
 
+### 3B. Product Performance Quartiles
 
+- Business question: Which specific products should Zara discontinue, promote more, or expand?
+- Why is this KPI relevant ?: This KPI aims to divide the product portfolio of Zara in 4 performance quartiles based on the revenue of each items (sales volume * price). This would get valuable data on high-performance and low-performance products, giving insights to better understand revenue concentration.
+
+```sql
+WITH sales_by_product as (
+  SELECT
+    terms as clothing_type,
+    product_id,
+    name as product_name,
+    section as gender,
+    SUM(price * sales_volume) as revenue,
+    SUM(price * sales_volume)
+      / NULLIF(SUM(sales_volume), 0) as revenue_per_piece
+  FROM zara_sales
+  GROUP BY
+    terms,
+    product_id,
+    section,
+    name
+)
+SELECT
+gender,
+clothing_type,
+product_id,
+revenue_per_piece,
+product_name,
+revenue,
+NTILE(4) OVER (PARTITION BY clothing_type ORDER BY revenue DESC) AS performance_quartile
+FROM sales_by_product
+ORDER BY
+performance_quartile 
+```
+
+Answer:
 
 
 
