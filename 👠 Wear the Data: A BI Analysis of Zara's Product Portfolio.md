@@ -175,7 +175,7 @@ Coupled with the previous KPI, this one confirms that Zara's endless and massive
 ### 3B. Product Performance Quartiles
 
 - Business question: Which specific products should Zara discontinue, promote more, or expand?
-- Why is this KPI relevant ?: This KPI aims to divide the product portfolio of Zara in 4 performance quartiles based on the revenue of each items (sales volume * price). This would get valuable data on high-performance and low-performance products, giving insights to better understand revenue concentration.
+- Why is this KPI relevant ?: This KPI aims to divide the product portfolio of Zara in 4 performance quartiles based on the revenue of each items (sales volume * price), blending volume, margin, and relative performace in a single view. In this sense, it gives answers to questions revolving around top vs. bottom performers, revenue insights, and gender comparisons. Coupled with the two previous KPIs, it paves the way for actionable steps that might include boosting or levelling off promotions, rolling out new selling tactics for certains products or considering discountinuing very lowest performers.
 
 ```sql
 WITH sales_by_product as (
@@ -208,6 +208,15 @@ performance_quartile
 ```
 
 Answer:
+![image](https://github.com/user-attachments/assets/3b61c299-8a4c-469d-abf4-40193005f80f)
+
+![image](https://github.com/user-attachments/assets/05e31db4-6779-439e-8c74-b45555bef8c3)
+
+As this table spans over 252 different products - capturing every product quartile, revenue, and price - it remains user friendly when displayed in Power BI in the report, giving the possibility to filtering and slicing across all categories and performing aggregation to get a better understanding of the product's performance on the market.  
+From a very first view, it can be noticed that product the most profitable product is a men's jacket as well as the most expensive one. Generally speaking, men's jackets are overrepresented in both the first and fourth quartile, togheter with men's shoes.
+
+
+
 
 
 
