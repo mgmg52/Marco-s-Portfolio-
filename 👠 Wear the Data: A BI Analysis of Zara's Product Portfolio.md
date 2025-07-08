@@ -44,21 +44,7 @@ Answer:
 
 There are no nulls in the key fields.
 
-### 3A. How are uniques products split bewteen men and women in the dataset?
-
-```sql
-SELECT COUNT(DISTINCT product_id) as unique_product_id, section as sex
-FROM zara_sales
-GROUP BY sex
-```
-
-Answer:
-
-![2a](https://github.com/user-attachments/assets/ab491b9c-0c88-4778-9e63-7648bb42d6cf)
-
-Out of 252 unique products, 218 are for men and 34 for woman.
-
-### 4A. Which are the existing clothing types in the dataset?
+### 3A. How are uniques products split bewteen men and women in the dataset and what are the existing clothing types in the dataset?
 
 ```sql
 SELECT DISTINCT (terms) as clothing_type, section as sex
@@ -68,10 +54,10 @@ ORDER BY sex
 
 Answer:
 
-![c types and sex](https://github.com/user-attachments/assets/39dd6d16-3f07-423e-9880-719427fdca71)
+![image](https://github.com/user-attachments/assets/ea7dec80-bc51-4e52-ba83-5cc1a885f5b2)
 
-There are 5 different types of clothes. All of them are available for men, while women reports just sweatears as those available. 
-
+Out of 252 unique products, just 34 for women while the rest is intended for men. There are 5 different types of clothes, and, while all of them are available for men, women reports just sweatears as those available.  
+Moreover, 
 
 ### Key insights gained
 
