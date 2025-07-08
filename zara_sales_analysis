@@ -1,4 +1,0 @@
-SELECT DISTINCT terms as clothing_type, COUNT(terms) as num_clothing_type, section as sex
-FROM zara_sales
-GROUP BY terms, section
-ORDER BY num_clothing_type DESC
