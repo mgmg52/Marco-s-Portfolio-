@@ -47,23 +47,25 @@ There are no nulls in the key fields.
 ### 3A. How are uniques products split bewteen men and women in the dataset and what are the existing clothing types in the dataset?
 
 ```sql
-SELECT DISTINCT (terms) as clothing_type, section as sex
+SELECT DISTINCT terms as clothing_type, COUNT(terms) as num_clothing_type, section as sex
 FROM zara_sales
-ORDER BY sex
+GROUP BY terms, section
+ORDER BY num_clothing_type DESC
 ```
 
 Answer:
 
-![image](https://github.com/user-attachments/assets/ea7dec80-bc51-4e52-ba83-5cc1a885f5b2)
+![image](https://github.com/user-attachments/assets/e67e0f19-1d74-470d-ad00-2de7e6a19f40)
+
 
 Out of 252 unique products, just 34 for women while the rest is intended for men. There are 5 different types of clothes, and, while all of them are available for men, women reports just sweatears as those available.  
-Moreover, 
+Moreover, jackets are clearly over-represented, while there are just 8 items categorized as jeans and 7 as shoes in the whole dataset.
 
 ### Key insights gained
 
 The dataset contains 252 unique products and there are no missing value in any critical field, so we can trust its completeness.  
 However, there is a strong imbalance in products offerings as 218 products are classified under the Men's section, while only 34 under Women's section.  
-Moreover, all the five clothing types appear in the Men's section, whereas the Women's section includes only sweaters.  
+Moreover, all the five clothing types appear in the Men's section, whereas the Women's section includes only sweaters, and the some clothing type are clearly over-represented.
 This inbalanced assortment gives an important context the correctly interpretate the following KPIs.
 
 ## B. KPIs Analysis: Zara Portfolio Performance
