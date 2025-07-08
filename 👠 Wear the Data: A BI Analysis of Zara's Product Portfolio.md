@@ -172,7 +172,9 @@ WITH sales_by_product as (
     product_id,
     name as product_name,
     section as gender,
+-- total revenue per product
     SUM(price * sales_volume) as revenue,
+-- average price per sold unit
     SUM(price * sales_volume)
       / NULLIF(SUM(sales_volume), 0) as revenue_per_piece
   FROM zara_sales
@@ -189,19 +191,25 @@ product_id,
 revenue_per_piece,
 product_name,
 revenue,
-NTILE(4) OVER (PARTITION BY clothing_type ORDER BY revenue DESC) AS performance_quartile
+-- dividing the whole dataset into four equal-sized buckets by descending revenue
+NTILE(4) OVER (ORDER BY revenue DESC) AS performance_quartile
 FROM sales_by_product
 ORDER BY
 performance_quartile 
 ```
 
 Answer:
-![image](https://github.com/user-attachments/assets/3b61c299-8a4c-469d-abf4-40193005f80f)
 
-![image](https://github.com/user-attachments/assets/05e31db4-6779-439e-8c74-b45555bef8c3)
+![image](https://github.com/user-attachments/assets/9c0e5f29-aea5-479e-a276-a0dc0d13ae0a)
+
+![image](https://github.com/user-attachments/assets/1edc58ba-85de-4e67-b478-bf09f437af49)
+
+![image](https://github.com/user-attachments/assets/cbb2c88f-5c79-4ef3-8df8-f49a34ff5d5b)
+
+![image](https://github.com/user-attachments/assets/edbf1289-76ec-4a52-9473-b66e11fe7a7e)
 
 As this table spans over 252 different products - capturing every product quartile, revenue, and price - it remains user friendly when displayed in Power BI in the report, giving the possibility to filtering and slicing across all categories and performing aggregation to get a better understanding of the product's performance on the market.  
-From a very first view, it can be noticed that product the most profitable product is a men's jacket as well as the most expensive one. Generally speaking, men's jackets are overrepresented in both the first and fourth quartile, togheter with men's shoes.
+However, from a first view, it can be noticed that product the most profitable product is a men's jacket as well as the most expensive one. Generally speaking, men's jackets are overrepresented in the first and second quartile, while the remaing two present a more mixed composition.
 
 
 
