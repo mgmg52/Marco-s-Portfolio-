@@ -252,6 +252,7 @@ ORDER BY clothing_type ASC
 ```
 
 Answer:
+
 ![image](https://github.com/user-attachments/assets/e8b8d97c-6b3f-4f77-803c-318488883111)
 
 As expected due to their over-rapresentation in the dataset, men's jacktes constitues the four highest sources of revenue for Zara, accounting for over 68% of it regardless of the slices. In this sense, Zara appears to be extremely dependent on this clothing type, resulting in an enormous revenue loss if a outwear trends or a supply chain issue would hit.  
