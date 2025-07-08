@@ -104,7 +104,7 @@ The more negative the lift, the worse a promotion performs vs full-price.
 Within Zara's portfolio, Women's sweaters are clearly promo winners, as a promotion lift rate of 0.234 means that those in promotion are sold 23.4 % times more compared to the full-price ones. A positive lift rate is also seen for Men's sweaters.  
 However, a moderate negative promotional lift rate is showed in all the other clothing type for men, meaning that those in promotion are sold less than full price items, with the worst performer being Men's t-shirts with a promotional lift rate of -0.125.  
 This KPI clearly reveals that most of the promotions are failing to attrack new buyers as they present a negative lift rate.  
-In this sense, Zara should pull back discount's on certain men's jackets, shoes, jeans, and t shirts, rethinking new ways to increase sales. Moreover, Zara should prioritize promo bugdet allocation in Women's sweaters slice as it has proven to deliver a significant boost in sales volume.
+In this sense, Zara should pull back discount's on certain men's jackets, shoes, jeans, and t shirts, rethinking new ways to increase sales. Moreover, the company should prioritize promo bugdet allocation in Women's sweaters slice as it has proven to deliver a significant boost in sales volume.
 
 ### 2B. Efficiency flag 
 
@@ -158,11 +158,11 @@ Answer:
 The results show that Men's shoes, jackets, and t-shirts are very promoted but report a low lift, resulting in discounting that deliver no incremental value, as almost half of these three items on these clothing types are on promotion but they all report a negative lift rate.  
 On the opposite, promotions on Women's sweaters deliver strong incremental sales as well as Men's sweaters which shows a both a positive promotional penetration and lift rate despite cannote be listed as over-promoted due to a moderate penetration rate (0.143).  
 Finally, despite cannot be defined as over-promoted due to a promotional penetration slight under 0.40, Men's jeans still show a negative relationship bewteen items on promotion and the value they deliver.  
-Coupled with the previous KPI, this one confirms that Zara's endless and massive discount culture is driving ambigous results on sales volume, with the notable expection of Women's sweaters. Furthermore, men's sweater slice is worth keeping under observation, testing if incrementally increase promotions lead to lift rate to scale further.
+Coupled with the previous KPI, this one confirms that Zara's endless and massive discount culture is driving ambigous results on sales volume, indicating a waste of promotional budget on men's shoes, jackets, and t shirts. Within this landscape, the notable expection is represented by Women's sweaters. Finally, men's sweater slice is worth keeping under observation, testing if incrementally increase promotions lead to lift rate to scale further.
 
 ### 3B. Product Performance Quartiles
 
-- Business question: Which specific products should Zara discontinue, promote more, or expand?
+- Business question: Where is Zara revenue concentration?
 - Why is this KPI relevant ?: This KPI aims to divide the product portfolio of Zara in 4 performance quartiles based on the revenue of each items (sales volume * price), blending volume, margin, and relative performace in a single view. In this sense, it gives answers to questions revolving around top vs. bottom performers, revenue insights, and gender comparisons. Coupled with the two previous KPIs, it paves the way for actionable steps that might include boosting or levelling off promotions, rolling out new selling tactics for certains products or considering discountinuing very lowest performers.
 
 ```sql
@@ -209,7 +209,59 @@ Answer:
 ![image](https://github.com/user-attachments/assets/edbf1289-76ec-4a52-9473-b66e11fe7a7e)
 
 As this table spans over 252 different products - capturing every product quartile, revenue, and price - it remains user friendly when displayed in Power BI in the report, giving the possibility to filtering and slicing across all categories and performing aggregation to get a better understanding of the product's performance on the market.  
-However, from a first view, it can be noticed that product the most profitable product is a men's jacket as well as the most expensive one. Generally speaking, men's jackets are overrepresented in the first and second quartile, while the remaing two present a more mixed composition.
+However, from a first view, it can be noticed that product most of the revenues of Zara's portfolio lay in the very profitable slice of men's jacket, being  over-represented in the first and second quartile, and topping the table of most priced products.  
+On the other hand, the other two quartiles present a more diluted composition.
+
+### 4B. Portfolio Diversity Score
+
+-- Business question: Is Zara too dependent on certain categories, creating a potential business risk?
+-- Why is this KPI relevant ?: This KPI can be thought of as the step forward of the previous one. By computing, for every combination of seasonal and promotional flag, the total revenue and its share of overall and clothing type-level revenue, Zara would expand its knowledge of which combination of term, seasonal, promotion (slice) drives the revenue. Coupled with the Product Performance Quartiles, these KPIs aim to disclose over- and under-invested areas within Zara’s portfolio.
+
+```sql
+WITH revenue_slices AS (
+  SELECT
+    terms as clothing_type,        
+    seasonal,                                              
+    promotion,                                             
+    SUM(price * sales_volume) as revenue
+  FROM zara_sales
+  GROUP BY
+    terms,
+    seasonal,
+    promotion
+)
+SELECT
+  clothing_type,
+  seasonal,
+  promotion,
+  revenue,
+  -- share of all Zara revenue
+  ROUND(
+    100.0 * revenue
+    / SUM(revenue) OVER (),
+    2
+  ) as share_of_total_revenue,
+  -- share of revenue within this clothing_type
+  ROUND(
+    100.0 * revenue
+    / SUM(revenue) OVER (PARTITION BY clothing_type),
+    2
+  ) as share_of_term_revenue
+FROM revenue_slices
+ORDER BY clothing_type ASC
+```
+
+Answer:
+![image](https://github.com/user-attachments/assets/e8b8d97c-6b3f-4f77-803c-318488883111)
+
+As expected due to their over-rapresentation in the dataset, men's jacktes constitues the four highest sources of revenue for Zara, accounting for over 68% of it regardless of the slices. In this sense, Zara appears to be extremely dependent on this clothing type, resulting in an enormous revenue loss if a outwear trends or a supply chain issue would hit.  
+On the other hand, slice-level fragmentation whithin clothing type looks very fragmented as no single "seasonal x promotion" slice clearly stands out as the most profitable combination compared to the others, describing a stable portfolio management that is not overly sensitive to timing or discounting.  
+Generally speaking, these results seem to show that there is no magic slice Zara can pull to outperform the rest and promo sales are not cannibalizing full-price volume, creating room for experiment in one slice without major risks of drop in overall category revenue due to a huge dependence on a certain slice. 
+Finally, apart from peak of revenues constituted by jackets due to their over-rapresentation, Zara does not seem to present layer of specific high profitability, suggesting that real profit drives may lay in different segments, such as regional market or specific styles.
+
+
+
+
 
 
 
