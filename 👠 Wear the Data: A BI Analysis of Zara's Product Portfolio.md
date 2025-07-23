@@ -79,7 +79,6 @@ In fact, it contributes to acquire valuable insights on relative performance pat
 
 ```sql
 SELECT
-  section as sex,
   terms as clothing_type,
   -- average sales volume when on promotion -- What is the average number of units sold for items that were on promotion?
   ROUND(AVG(CASE WHEN promotion = 'Yes' THEN sales_volume END),3) as avg_promo_vol,
@@ -92,19 +91,19 @@ SELECT
     3
   ) as promotional_lift_rate
 FROM zara_sales
-GROUP BY section,terms
+GROUP BY terms
 ORDER BY promotional_lift_rate DESC
 ```
 
 Answer:
 
-![image](https://github.com/user-attachments/assets/1959a942-ff87-4e27-8026-509a8c2227b1)
+<img width="546" height="141" alt="image" src="https://github.com/user-attachments/assets/dd626bb6-4727-4027-9a43-a9feb42814a8" />
 
 The more negative the lift, the worse a promotion performs vs full-price.  
-Within Zara's portfolio, Women's sweaters are clearly promo winners, as a promotion lift rate of 0.234 means that those in promotion are sold 23.4 % times more compared to the full-price ones. A positive lift rate is also seen for Men's sweaters.  
-However, a moderate negative promotional lift rate is showed in all the other clothing type for men, meaning that those in promotion are sold less than full price items, with the worst performer being Men's t-shirts with a promotional lift rate of -0.125.  
+Within Zara's portfolio, sweaters are clearly promo winners, as a promotion lift rate of 0.222 means that those in promotion are sold 22.2 % times more compared to the full-price ones.  
+However, a moderate negative promotional lift rate is showed in all the other clothing type for, meaning that those in promotion are sold less than full price items, with the worst performer being t-shirts with a promotional lift rate of -0.125.  
 This KPI clearly reveals that most of the promotions are failing to attrack new buyers as they present a negative lift rate.  
-In this sense, Zara should pull back discount's on certain men's jackets, shoes, jeans, and t shirts, rethinking new ways to increase sales. Moreover, the company should prioritize promo bugdet allocation in Women's sweaters slice as it has proven to deliver a significant boost in sales volume.
+In this sense, Zara should pull back discount's on certain jackets, shoes, jeans, and t shirts, rethinking new ways to increase sales. Moreover, the company should prioritize promo bugdet allocation to sweaters slice as it has proven to deliver a significant boost in sales volume.
 
 ### 2B. Efficiency flag 
 
@@ -112,9 +111,8 @@ In this sense, Zara should pull back discount's on certain men's jackets, shoes,
 - Why is this KPI relevant ?: This KPI is related to the previous one and the marketing concept of “promotion fatigue”, namely when customers become overwhelmed by the number of promotions and marketing communications that learn to wait for markdown, generally reducing the engagement with the brand. By comparing promotion penetration (the ratio between promoted items and total items) and the previously computed promotional lift rate within clothing type and gender, we could get a better picture of which product categories are over-promoted but are actually underperforming.
 
 ```sql
-  SELECT
+SELECT
   terms as clothing_type,
-  section as sex,
   -- total number of clothes
   COUNT(*) as total_clothes,
   -- number of clothes on promotion
@@ -147,18 +145,18 @@ In this sense, Zara should pull back discount's on certain men's jackets, shoes,
     ELSE 'OK'
   END as efficiency_flag
 FROM zara_sales
-GROUP BY terms,section
+GROUP BY terms
 ORDER BY promotion_penetration DESC
 ```
 
 Answer:
 
-![image](https://github.com/user-attachments/assets/cb856da8-57d8-4c7e-9257-9a729870a938)
+<img width="777" height="140" alt="image" src="https://github.com/user-attachments/assets/464d1e9e-216d-4b24-aa5b-03a822f25b65" />
 
-The results show that Men's shoes, jackets, and t-shirts are very promoted but report a low lift, resulting in discounting that deliver no incremental value, as almost half of these three items on these clothing types are on promotion but they all report a negative lift rate.  
-On the opposite, promotions on Women's sweaters deliver strong incremental sales as well as Men's sweaters which shows a both a positive promotional penetration and lift rate despite cannote be listed as over-promoted due to a moderate penetration rate (0.143).  
-Finally, despite cannot be defined as over-promoted due to a promotional penetration slight under 0.40, Men's jeans still show a negative relationship bewteen items on promotion and the value they deliver.  
-Coupled with the previous KPI, this one confirms that Zara's endless and massive discount culture is driving ambigous results on sales volume, indicating a waste of promotional budget on men's shoes, jackets, and t shirts. Within this landscape, the notable expection is represented by Women's sweaters. Finally, men's sweater slice is worth keeping under observation, testing if incrementally increase promotions lead to lift rate to scale further.
+The results show that shoes, jackets, and t-shirts are very promoted but report a low lift, resulting in discounting that deliver no incremental value, as almost half of these three items on these clothing types are on promotion but they all report a negative lift rate.  
+On the opposite, promotions on sweaters deliver strong incremental sales and shows a positive promotional lift rate, a unique trait across the five clothing types.  
+Finally, despite cannot be defined as over-promoted due to a promotional penetration slight under 0.40, jeans still show a negative relationship bewteen items on promotion and the value they deliver.  
+Coupled with the previous KPI, this one confirms that Zara's endless and massive discount culture is driving ambigous results on sales volume, indicating a waste of promotional budget on shoes, jackets, and t shirts. Within this landscape, the notable expection is represented by sweaters. 
 
 ### 3B. Product Performance Quartiles
 
