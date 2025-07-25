@@ -20,7 +20,7 @@ This repository was created to showcase my analytical and technical skills using
 ## 📈 My portfolio projects
 This section contains a list of projects with brief descriptions.
 
-### [👠 Wear the Data: A BI Analysis of Zara Product Portfolio](./👠 Wear the Data: A BI Analysis of Zara Product Portfolio.md)
+👠 [ Wear the Data: A BI Analysis of Zara's Product Portfolio](https://github.com/mgmg52/Marco-s-Portfolio-/blob/main/%F0%9F%91%A0%20Wear%20the%20Data%3A%20A%20BI%20Analysis%20of%20Zara's%20Product%20Portfolio.md#-wear-the-data-a-bi-analysis-of-zaras-product-portfolio)
 
 **Description:** The main goal of this project is to examine Zara’s product portfolio to get useful insights on how Zara can maximize promotional effectiviness and optimize it for maximum sales impact. We compute 4 main KPIs leveraging SQL and, then, information and insights acquired are visualized using Power BI.                                                                                                                                                                                                                                                                     
 
