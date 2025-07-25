@@ -19,7 +19,9 @@ This repository was created to showcase my analytical and technical skills using
  
 ## 📈 My portfolio projects
 This section contains a list of projects with brief descriptions.
-### 👠 Wear the Data: A BI Analysis of Zara Product Portfolio
+
+### [👠 Wear the Data: A BI Analysis of Zara Product Portfolio](./👠 Wear the Data: A BI Analysis of Zara Product Portfolio.md)
+
 **Description:** The main goal of this project is to examine Zara’s product portfolio to get useful insights on how Zara can maximize promotional effectiviness and optimize it for maximum sales impact. We compute 4 main KPIs leveraging SQL and, then, information and insights acquired are visualized using Power BI.                                                                                                                                                                                                                                                                     
 
 **Original dataset:** [Download zara_sales.csv](./zara_sales.csv)
@@ -28,7 +30,7 @@ This section contains a list of projects with brief descriptions.
 
 **Hard skills:** SQL, Power BI      
 
-**Power BI visualization:** [Wear The Data](https://app.powerbi.com/reportEmbed?reportId=4f9e9096-7a12-42e1-8d3c-251a373a36a5&autoAuth=true&ctid=5a4ba6f9-f531-4f32-9467-398f19e69de4)
+**Power BI visualization:** [Wear the Data](https://app.powerbi.com/reportEmbed?reportId=4f9e9096-7a12-42e1-8d3c-251a373a36a5&autoAuth=true&ctid=5a4ba6f9-f531-4f32-9467-398f19e69de4)
 
 **Results:** This analysis confirms that clothing categories alone aren’t driving Zara’s performance and way more even distributed across revenue quartile than previously. Moreover, each segment (seasonal × promo) contributes roughly the same share of revenue, highlighting a very balanced and sustainable revenue flow.  
 Regarding promotions, while these items generate just over half of total revenue, promotional lift is negative except for sweaters. Jackets dominate simply by volume and discounting, not superior promo effectiveness. 
