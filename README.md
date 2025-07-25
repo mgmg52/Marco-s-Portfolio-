@@ -22,7 +22,8 @@ This section contains a list of projects with brief descriptions.
 ### 👠 Wear the Data: A BI Analysis of Zara Product Portfolio
 **Description:** The main goal of this project is to examine Zara’s product portfolio to get useful insights on how Zara can maximize promotional effectiviness and optimize it for maximum sales impact. We compute 4 main KPIs leveraging SQL and, then, information and insights acquired are visualized using Power BI.                                                                                                                                                                                                                                                                     
 
-**Original dataset:**(./zara_sales.csv)                                                                                                                                                                                                         
+**Original dataset:** [Download zara_sales.csv](./zara_sales.csv)
+                                                                                                                                                                                                       
 
 **Skills:** analytical thinking, data analysis, data visualization                                                                                                                                                    
 
