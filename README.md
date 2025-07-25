@@ -35,7 +35,7 @@ This section contains a list of projects with brief descriptions.
 **Results:** This analysis confirms that clothing categories alone aren’t driving Zara’s performance and way more even distributed across revenue quartile than previously. Moreover, each segment (seasonal × promo) contributes roughly the same share of revenue, highlighting a very balanced and sustainable revenue flow.  
 Regarding promotions, while these items generate just over half of total revenue, promotional lift is negative except for sweaters. Jackets dominate simply by volume and discounting, not superior promo effectiveness. 
 
-Based on this, Zara should rethink its promo budget allocation, prioritizing sweaters slice and shifting from broader discount across categories to extremly targeted campaigns. The company should also maintain its balanced mix by focusing on assortment and budget alliocation on finer attrivutes, rather than hopelesslly searching for a magic, profitable category that can fit all.
+Based on this, Zara should rethink its promo budget allocation, prioritizing sweaters slice and shifting from broader discount across categories to extremely targeted campaigns. The company should also maintain its balanced mix by focusing on assortment and budget alliocation on finer attrivutes, rather than hopelesslly searching for a magic, profitable category that can fit all.
 
 
   
