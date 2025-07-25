@@ -24,13 +24,11 @@ This section contains a list of projects with brief descriptions.
 
 **Original dataset:** [Download zara_sales.csv](./zara_sales.csv)
 
+**Skills:** Analytical thinking, Data analysis, Data visualization                                                                                                                                                    
 
-https://app.powerbi.com/reportEmbed?reportId=4f9e9096-7a12-42e1-8d3c-251a373a36a5&autoAuth=true&ctid=5a4ba6f9-f531-4f32-9467-398f19e69de4
-                                                                                                                                                                                                       
+**Hard skills:** SQL, Power BI      
 
-**Skills:** analytical thinking, data analysis, data visualization                                                                                                                                                    
-
-**Hard skills:** SQL, Power BI                                                                                                                                                                                        
+**Power BI visualization:** [Wear The Data](https://app.powerbi.com/reportEmbed?reportId=4f9e9096-7a12-42e1-8d3c-251a373a36a5&autoAuth=true&ctid=5a4ba6f9-f531-4f32-9467-398f19e69de4)
 
 **Results:** This analysis confirms that clothing categories alone aren’t driving Zara’s performance and way more even distributed across revenue quartile than previously. Moreover, each segment (seasonal × promo) contributes roughly the same share of revenue, highlighting a very balanced and sustainable revenue flow.  
 Regarding promotions, while these items generate just over half of total revenue, promotional lift is negative except for sweaters. Jackets dominate simply by volume and discounting, not superior promo effectiveness. 
