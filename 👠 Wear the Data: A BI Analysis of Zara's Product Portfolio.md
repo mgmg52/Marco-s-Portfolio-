@@ -212,8 +212,8 @@ On the other hand, the other two quartiles present a more diluted composition.
 
 ### 4B. Portfolio Diversity Score
 
--- Business question: Is Zara too dependent on certain categories, creating a potential business risk?
--- Why is this KPI relevant ?: This KPI can be thought of as the step forward of the previous one. By computing, for every combination of seasonal and promotional flag, the total revenue and its share of overall and clothing type-level revenue, Zara would expand its knowledge of which combination of term, seasonal, promotion (slice) drives the revenue. Coupled with the Product Performance Quartiles, these KPIs aim to disclose over- and under-invested areas within Zara’s portfolio.
+- Business question: Is Zara too dependent on certain categories, creating a potential business risk?
+- Why is this KPI relevant ?: This KPI can be thought of as the step forward of the previous one. By computing, for every combination of seasonal and promotional flag, the total revenue and its share of overall and clothing type-level revenue, Zara would expand its knowledge of which combination of term, seasonal, promotion (slice) drives the revenue. Coupled with the Product Performance Quartiles, these KPIs aim to disclose over- and under-invested areas within Zara’s portfolio.
 
 ```sql
 WITH revenue_slices AS (
