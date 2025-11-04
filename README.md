@@ -38,7 +38,7 @@ Regarding promotions, while these items generate just over half of total revenue
 Based on this, Zara should rethink its promo budget allocation, prioritizing sweaters slice and shifting from broader discount across categories to extremely targeted campaigns. The company should also maintain its balanced mix by focusing on assortment and budget alliocation on finer attrivutes, rather than hopelesslly searching for a magic, profitable category that can fit all.
 
 
-## 🔢 Python exercises (#Pyhton-exercises)
+## 🔢 Python exercises
 I am working through these exercises to build my Python skills. Most are from the University of Helsinki’s Introduction to Programming (BSCS1001, 5 ECTS) and Advanced Course in Programming (BSCS1002, 5 ECTS).
 
   - [Loops with conditions](#Loops-with-conditions)
