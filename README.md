@@ -10,7 +10,7 @@ This repository was created to showcase my analytical and technical skills using
 ## 📚 Table of Contents
 
 - [📈 My portfolio projects](#my-portfolio-projects)
- - 👠 [Wear the Data: A BI Analysis of Zara's Product Portfolio](https://github.com/mgmg52/Marco-s-Portfolio-/blob/main/%F0%9F%91%A0%20Wear%20the%20Data%3A%20A%20BI%20Analysis%20of%20Zara's%20Product%20Portfolio.md#-wear-the-data-a-bi-analysis-of-zaras-product-portfolio)
+  - 👠 [Wear the Data: A BI Analysis of Zara's Product Portfolio](https://github.com/mgmg52/Marco-s-Portfolio-/blob/main/%F0%9F%91%A0%20Wear%20the%20Data%3A%20A%20BI%20Analysis%20of%20Zara's%20Product%20Portfolio.md#-wear-the-data-a-bi-analysis-of-zaras-product-portfolio)
     
 - [🧾Study projects](#study-projects)
   - [SQL exercises](#SQL-exercises)
