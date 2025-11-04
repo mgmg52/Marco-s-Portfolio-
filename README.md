@@ -41,5 +41,9 @@ Based on this, Zara should rethink its promo budget allocation, prioritizing swe
 ## 🔢 Python exercises
 I am working through these exercises to build my Python skills. Most are from the University of Helsinki’s Introduction to Programming (BSCS1001, 5 ECTS) and Advanced Course in Programming (BSCS1002, 5 ECTS).
 
+  - [Loops with conditions](#Loops-with-conditions)
+  - [Defining functions](#Defining-conditions)
+  - [Lists](#Lists)
+
 
 
