@@ -14,7 +14,7 @@ This repository was created to showcase my analytical and technical skills using
     
 - [🧾Study projects](#study-projects)
   - [SQL exercises](#SQL-exercises)
-  - [Python exercises](#https://github.com/mgmg52/Marco-s-Portfolio-/blob/main/Python%20exercises.md)
+  - [Python exercises](https://github.com/mgmg52/Marco-s-Portfolio-/blob/main/Python%20exercises.md)
   - [Excel exercises](#Excel-exercises)
  
 ## 📈 My portfolio projects
